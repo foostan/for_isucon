@@ -1,0 +1,9 @@
+#!/bin/sh -x
+
+sudo rm /var/log/nginx/*
+sudo systemctl restart nginx
+
+sudo rm /var/log/mysql/mysql-slow.log
+sudo systemctl restart mysql
+
+sudo systemctl restart isu-ruby
